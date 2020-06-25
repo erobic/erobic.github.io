@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Robik Shrestha</title>
+    <description>Robik Shrestha Personal Homepage</description>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Robik Shrestha">
+    <meta property="og:url" content="http://erobic.github.io/"/>
+    <meta name='og:description' content='Robik Shrestha Personal Homepage'/>
+
+    <meta property="og:image" content="http://erobic.github.io/images/robik.jpg"/>
+    <meta property="og:image:url" content="http://erobic.github.io/images/robik.jpg"/>
+
+
+    <meta name='twitter:title' content='ShresthaRobik'/>
+
+
+    <meta name='twitter:image' content='http://erobic.github.io/images/robik.jpg'/>
+
+    <meta name='twitter:creator' content='@ShresthaRobik'/>
+    <meta name='twitter:site' content='@ShresthaRobik'/>
+    <meta name='twitter:url' content='http://erobic.github.io/'/>
+
+    <meta name='twitter:description' content='Robik Shrestha Homepage'/>
+
+
+    <meta name="keywords"
+          content="RIT, robik, Robik Shrestha, machine learning, AI, Artificial Intelligence, Computer Vision, Deep learning, Neural Networks">
+    <!-- 	<link href=" data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAQAAADZc7J/AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfjAxYWBygMiVDgAAADWElEQVRIx5WVz2vcVRTFP+d95zuTyWQm045JY9qm1GKJRI1VWrWgFjdSaRGF0p2I4sa/wI1LFy4rKBSkG9eKQRdaf0CLFEXdCAXLpEmTajttTJPOTOb393tdzGRmksyk8W7e4t1z3jn3Xu4TrfAeYsjuEBPmKIY1dhiR5uFgkncoUzLHZb7n/xIghu0Ec0zgU+cKazslcK0zYcd1lRH2UmBahzYmeXjtxD4EWtMlPMYp4pMjpc0pUZzD4eFttSAAo2oJVQnN0xxpAdZ6XdgRTlPhJnn+IbvRXqsGAV5DFZZsjLIVFUFNvIdkL/A2Q0qSJ80vfNyTAKyuLHuJcktFBte9m+xlvUWcKdsjMcs3WurdBWgQkiQAMtwzwBHgjvM6+y1BCmORD/RruLUGTa+UbZIkJWbtrkDOQnkneMOmbA+7WNMsn3LR6EHAehkGVOdvm9YYl0Byr/CaTWmXDavGDT5hhjDoO0hokCFWSSnCXYpgL/KqTTNuUQpkuWBfqQcc3HrHrUgeiHOdLFX3nJ21x5XEo6gsnzHTG95tocYqPkOkGKfAYR0kRUUrLHPOfuwH31iDBYaJkqRhTxInpqo9xl/6kJ/6w+ka8SpRxoiwbPvYjVS0AzQ4zw9sAwdnHQUFSuSIKK4chfBZBnSDI5YytouOgoARRA24h/GSAq3i6yhnTDsisDq3qRAnQopnEFXy3KfGSe13OyEgtHlKRLjPiDnmARikQI3TeF5fgvaNpAN6BJ+MVfiW9+XzBA0KKpFmlUV7oIKAGgmSZFjgHFnOc408g0zIOMPD3oMIDOp4pFnRFf4VwTxfsJsECY7yFO/h+10woS0KTLIRyixSxg/w4Gv+JEGSUY1y0k4F2ysAqyqkjKjRgABWuMAaMaCquN7VhNsCdhuWbYMcS4ioWmuSn5mhTgFRIeTNjTaaXroINEAZkeZw02AIdb7kD8pEiPE7gxxrtCtmbRUdC7dYIsYq19u32CwXKRClyjF8nVKyU75mQrcFI8EAVy0g6lqdJbTvWGaAKqMMs8i+bs0hYfc/oUf1PEaAmGPNGi2pRfk6RAaPkKyi5FXoHqpugkDXyFmGz1mhZEHb4wK/6TY1PuIyN7Vim/dqpyke7mk3ubk5Dg85l2l+bJsn8j+qmELFeVcYCgAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAxOS0wMy0yMlQxODowNzoxNS0wNDowMMahXBMAAAAldEVYdGRhdGU6bW9kaWZ5ADIwMTktMDMtMjJUMTg6MDc6MTUtMDQ6MDC3/OSvAAAAAElFTkSuQmCC" rel="icon" type="image/x-icon" />
+        <link href=" data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAQAAADZc7J/AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfjAxYWBygMiVDgAAADWElEQVRIx5WVz2vcVRTFP+d95zuTyWQm045JY9qm1GKJRI1VWrWgFjdSaRGF0p2I4sa/wI1LFy4rKBSkG9eKQRdaf0CLFEXdCAXLpEmTajttTJPOTOb393tdzGRmksyk8W7e4t1z3jn3Xu4TrfAeYsjuEBPmKIY1dhiR5uFgkncoUzLHZb7n/xIghu0Ec0zgU+cKazslcK0zYcd1lRH2UmBahzYmeXjtxD4EWtMlPMYp4pMjpc0pUZzD4eFttSAAo2oJVQnN0xxpAdZ6XdgRTlPhJnn+IbvRXqsGAV5DFZZsjLIVFUFNvIdkL/A2Q0qSJ80vfNyTAKyuLHuJcktFBte9m+xlvUWcKdsjMcs3WurdBWgQkiQAMtwzwBHgjvM6+y1BCmORD/RruLUGTa+UbZIkJWbtrkDOQnkneMOmbA+7WNMsn3LR6EHAehkGVOdvm9YYl0Byr/CaTWmXDavGDT5hhjDoO0hokCFWSSnCXYpgL/KqTTNuUQpkuWBfqQcc3HrHrUgeiHOdLFX3nJ21x5XEo6gsnzHTG95tocYqPkOkGKfAYR0kRUUrLHPOfuwH31iDBYaJkqRhTxInpqo9xl/6kJ/6w+ka8SpRxoiwbPvYjVS0AzQ4zw9sAwdnHQUFSuSIKK4chfBZBnSDI5YytouOgoARRA24h/GSAq3i6yhnTDsisDq3qRAnQopnEFXy3KfGSe13OyEgtHlKRLjPiDnmARikQI3TeF5fgvaNpAN6BJ+MVfiW9+XzBA0KKpFmlUV7oIKAGgmSZFjgHFnOc408g0zIOMPD3oMIDOp4pFnRFf4VwTxfsJsECY7yFO/h+10woS0KTLIRyixSxg/w4Gv+JEGSUY1y0k4F2ysAqyqkjKjRgABWuMAaMaCquN7VhNsCdhuWbYMcS4ioWmuSn5mhTgFRIeTNjTaaXroINEAZkeZw02AIdb7kD8pEiPE7gxxrtCtmbRUdC7dYIsYq19u32CwXKRClyjF8nVKyU75mQrcFI8EAVy0g6lqdJbTvWGaAKqMMs8i+bs0hYfc/oUf1PEaAmGPNGi2pRfk6RAaPkKyi5FXoHqpugkDXyFmGz1mhZEHb4wK/6TY1PuIyN7Vim/dqpyke7mk3ubk5Dg85l2l+bJsn8j+qmELFeVcYCgAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAxOS0wMy0yMlQxODowNzoxNS0wNDowMMahXBMAAAAldEVYdGRhdGU6bW9kaWZ5ADIwMTktMDMtMjJUMTg6MDc6MTUtMDQ6MDC3/OSvAAAAAElFTkSuQmCC" rel="shortcut icon" type="image/x-icon" />
+ -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon"/>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+
+    <link rel="me" href="//twitter.com/ShresthaRobik">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <style>
+        heading {
+            /*background-color: #636a92;*/
+            background-color: #6a6b6d;
+            color:#fff;
+            padding:20px;
+            text-align: center;
+            margin-top:20px;
+            font-size: 36px;
+            font-weight: 500;
+            line-height:1.1;
+            display:block;
+        }
+        h2 {
+            font-size: 24px;
+            text-transform: uppercase;
+            color: #303030;
+            /*color: #fff;*/
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        h3 small {
+            font-size: 14px;
+            line-height: 1.375em;
+            color: #303030;
+            font-weight: 400;
+            margin-bottom: 10px;
+        }
+
+        h4 {
+            font-size: 19px;
+            line-height: 1.375em;
+            color: #303030;
+            font-weight: 400;
+            margin-bottom: 15px;
+        }
+
+        .h4-small {
+            font-size: 16px;
+            line-height: 1.375em;
+            /*color: #303030;*/
+            font-weight: 400;
+            margin-bottom: 10px;
+        }
+
+        .jumbotron {
+            /*background-color: #3b493b;*/
+            background-color: #262a3f;
+            color: #fff;
+            padding: 100px 25px;
+            font-family: Montserrat, sans-serif;
+        }
+
+        .container-fluid {
+            padding: 60px 50px;
+        }
+
+        .bg-grey {
+            background-color: #f6f6f6;
+        }
+
+        .logo-small {
+            color: #2c3e50;
+            font-size: 50px;
+        }
+
+        .logo {
+            color: #2c3e50;
+            font-size: 200px;
+        }
+
+        .thumbnail {
+            padding: 0 0 15px 0;
+            border: none;
+            border-radius: 0;
+        }
+
+        .thumbnail img {
+            width: 100%;
+            height: 100%;
+            margin-bottom: 10px;
+        }
+
+        .carousel-control.right, .carousel-control.left {
+            background-image: none;
+            color: #2c3e50;
+        }
+
+        .carousel-indicators li {
+            border-color: #2c3e50;
+        }
+
+        .carousel-indicators li.active {
+            background-color: #2c3e50;
+        }
+
+        .item h4 {
+            font-size: 19px;
+            line-height: 1.375em;
+            font-weight: 400;
+            font-style: italic;
+            margin: 70px 0;
+        }
+
+        .item span {
+            font-style: normal;
+        }
+
+        .panel {
+            border: 1px solid #2c3e50;
+            border-radius: 0 !important;
+            transition: box-shadow 0.5s;
+        }
+
+        .panel:hover {
+            box-shadow: 5px 0px 40px rgba(0, 0, 0, .2);
+        }
+
+        .panel-footer .btn:hover {
+            border: 1px solid #2c3e50;
+            background-color: #fff !important;
+            color: #2c3e50;
+        }
+
+        .panel-heading {
+            color: #fff !important;
+            background-color: #2c3e50 !important;
+            padding: 25px;
+            border-bottom: 1px solid transparent;
+            border-top-left-radius: 0px;
+            border-top-right-radius: 0px;
+            border-bottom-left-radius: 0px;
+            border-bottom-right-radius: 0px;
+        }
+
+        .panel-footer {
+            background-color: white !important;
+        }
+
+        .panel-footer h3 {
+            font-size: 32px;
+        }
+
+        .panel-footer h4 {
+            color: #aaa;
+            font-size: 14px;
+        }
+
+        .panel-footer .btn {
+            margin: 15px 0;
+            background-color: #2c3e50;
+            color: #fff;
+        }
+
+        .navbar {
+            margin-bottom: 0;
+            /*background-color: #2c3e50;*/
+            /*background-color: #262a3f;*/
+            /*background-color: #3b493b;*/
+            background-color: #262a3f;
+            z-index: 9999;
+            border: 0;
+            font-size: 12px !important;
+            line-height: 1.42857143 !important;
+            letter-spacing: 4px;
+            border-radius: 0;
+            font-family: Montserrat, sans-serif;
+        }
+
+        .navbar li a, .navbar .navbar-brand {
+            color: #fff !important;
+        }
+
+        .navbar-nav li a:hover, .navbar-nav li.active a {
+            color: #2c3e50 !important;
+            background-color: #fff !important;
+        }
+
+        .navbar-default .navbar-toggle {
+            border-color: transparent;
+            color: #fff !important;
+        }
+
+        footer .glyphicon {
+            font-size: 20px;
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+
+        .slideanim {
+            visibility: hidden;
+        }
+
+        .slide {
+            animation-name: slide;
+            -webkit-animation-name: slide;
+            animation-duration: 1s;
+            -webkit-animation-duration: 1s;
+            visibility: visible;
+        }
+
+        @keyframes slide {
+            0% {
+                opacity: 0;
+                -webkit-transform: translateY(70%);
+            }
+            100% {
+                opacity: 1;
+                -webkit-transform: translateY(0%);
+            }
+        }
+
+        @-webkit-keyframes slide {
+            0% {
+                opacity: 0;
+                -webkit-transform: translateY(70%);
+            }
+            100% {
+                opacity: 1;
+                -webkit-transform: translateY(0%);
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .col-sm-4 {
+                text-align: center;
+                margin: 25px 0;
+            }
+
+            .btn-lg {
+                width: 100%;
+                margin-bottom: 35px;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .logo {
+                font-size: 150px;
+            }
+        }
+
+        .affix {
+            padding: 0px;
+            -webkit-transition: padding 0.2s linear;
+            -moz-transition: padding 0.2s linear;
+            -o-transition: padding 0.2s linear;
+            transition: padding 0.2s linear;
+
+        }
+
+        .affix-top {
+            padding-top: 20px;
+            padding-bottom: 20px;
+            -webkit-transition: padding 0.5s linear;
+            -moz-transition: padding 0.5s linear;
+            -o-transition: padding 0.5s linear;
+            transition: padding 0.5s linear;
+        }
+
+        footer {
+            background-color: #2c3e50;
+
+        }
+
+        .mark {
+            /*background-color: #505850;*/
+            background-color: white;
+            color: #000;
+            padding-top: 12px;
+            padding-bottom: 12px;
+        }
+
+        .text-status {
+            color: #48719c;
+        }
+
+        .paper-title {
+            color: #262a3f;
+        }
+
+        kbd {
+            background-color: #e8bc86;
+            padding: 8px;
+            color: #000;
+        }
+    </style>
+</head>
+<body id="Home" data-spy="scroll" data-target=".navbar" data-offset="300">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav navbar-right">
+                <li data-toggle="collapse" data-target=".navbar-collapse.in"><a href="#home">HOME</a></li>
+                <li data-toggle="collapse" data-target=".navbar-collapse.in"><a href="#about">ABOUT</a></li>
+                <!--                <li data-toggle="collapse" data-target=".navbar-collapse.in"><a href="#news" >RECENT</a></li>-->
+                <li data-toggle="collapse" data-target=".navbar-collapse.in"><a href="#research">PUBLICATIONS</a></li>
+
+                <li data-toggle="collapse" data-target=".navbar-collapse.in"><a href="data/resume.pdf" target="_blank">C.V.</a>
+                </li>
+                <!--        <li><a href="#contact">CONTACT</a></li>-->
+            </ul>
+        </div>
+    </div>
+</nav>
+<br>
+
+<div class="jumbotron" id="home">
+    <div class="row">
+        <div class="text-center">
+            <h1>Robik Shrestha<br>
+                <a href="https://www.linkedin.com/in/robikshrestha" target="_blank">
+                <img border="0" alt="Linkedin" src="images/linkedin-logo.png" width="64"></a>
+
+                <a href="https://github.com/erobic" target="_blank">
+                    <img border="0" alt="Github" src="images/github-logo.png" width="64"></a>
+
+                <a href="https://scholar.google.com/citations?user=RzAjx8UAAAAJ&hl=en" target="_blank">
+                    <img border="0" alt="Google Scholar" src="images/gs-logo.png" width="64"></a>
+
+                <a href="https://twitter.com/ShresthaRobik" target="_blank">
+                    <img border="0" alt="Twitter" src="images/twitter-logo.png" width="64"></a>
+            </h1>
+            <h3>Research Assistant at Rochester Institute of Technology</h3>
+            robikshrestha [at] gmail [dot] com
+        </div>
+    </div>
+</div>
+
+<!-- Container (About Section) -->
+<div id="about" class="container-fluid">
+    <div class="row">
+
+        <div class="col-sm-6 col-sm-offset-2">
+
+            <h2>About Me</h2><br>
+
+            <h4>
+
+                I am a third year Ph.D. student working with <a href="http://chriskanan.com" target="_blank">Dr.
+                Christopher Kanan</a> in
+                <a href="http://www.cis.rit.edu" target="_blank">Chester F. Carlson Center for Imaging Science</a> at <a
+                    href="http://www.rit.edu" target="_blank">
+                Rochester Institute of Technology</a>.
+            </h4>
+            <h4>
+                My research is focused on developing robust computer vision and natural language processing systems.
+                I am interested in developing systems that demonstrate true understanding and reasoning skills through visual concept learning.
+            </h4>
+            <h4>
+                Before joining the Ph.D. program, I worked at <a href="http://www.vivekahealth.com/">Viveka Health</a>,
+                where I was involved in developing a fraud detection engine for U.S. healthcare insurance claims.
+            </h4>
+
+        </div>
+        <div class="col-sm-2">
+            <br><br><br>
+            <span><img src="images/robik.jpg" alt="Robik Shrestha" style="width:200px;height:250px;"></span>
+        </div>
+    </div>
+</div>
+
+
+<div id="research">
+    <div class="container-fluid">
+        <h1 class="text-center">Publications</h1><br>
+
+<!-- -->
+        <div class="row">
+            <div class="row">
+                <div class="col-sm-8 text-left  col-sm-offset-2 text-center">
+                    <a href="https://arxiv.org/abs/2004.05704" target="_blank"><h3 class="mark paper-title"><strong>A negative case analysis of visual grounding methods for VQA
+                    </strong><br>
+                        <small><strong>Robik Shrestha</strong>, Kushal Kafle, Christopher Kanan</small></h3></a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-3 col-sm-offset-2">
+                    <div><img src="images/negative-case-analysis.png" class="thumbnail img-responsive"
+                                                alt="Negative Case Analysis"><br>
+                    </div>
+                </div>
+
+                <div class="col-sm-5 text-left">
+                    <h4 class="h4-small">
+                        Existing Visual Question Answering (VQA)
+                        methods tend to exploit dataset biases and spurious statistical correlations, instead of producing right answers for the right reasons. To address this issue, recent bias mitigation methods for VQA propose to incorporate visual
+                        cues (e.g., human attention maps) to better
+                        ground the VQA models, showcasing impressive gains. However, we show that the performance improvements are not a result of improved visual grounding, but a regularization
+                        effect which prevents over-fitting to linguistic priors. For instance, we find that it is not
+                        actually necessary to provide proper, humanbased cues; random, insensible cues also result in similar improvements. Based on this
+                        observation, we propose a simpler regularization scheme that does not require any external
+                        annotations and yet achieves near state-of-the-art performance on VQA-CPv2.</h4>
+                    <h4 class="text-status"><strong>Association for Computational Linguistics (ACL 2020) </strong></h4>
+                    <a href="https://arxiv.org/abs/2004.05704" target="_blank"><kbd>Paper</kbd></a>
+                    <kbd data-toggle="collapse" data-target="#acl2020">Bibtex</kbd>
+                    <div id="acl2020" class="collapse">
+<pre><code>@inproceedings{shrestha-etal-2020-negative,
+title = "A negative case analysis of visual grounding methods for {VQA}",
+author = "Shrestha, Robik  and
+  Kafle, Kushal  and
+  Kanan, Christopher",
+booktitle = "Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics",
+month = jul,
+year = "2020",
+address = "Online",
+publisher = "Association for Computational Linguistics",
+url = "https://www.aclweb.org/anthology/2020.acl-main.727",
+pages = "8172--8181"
+}
+</code></pre>
+                    </div>
+                    <br>
+                </div>
+            </div>
+        </div>
+        <hr/>
+
+        <!-- -->
+
+        <div class="row">
+            <div class="row">
+                <div class="col-sm-8 text-left  col-sm-offset-2 text-center">
+                    <a href="https://arxiv.org/abs/1910.02509" target="_blank"><h3 class="mark paper-title"><strong>REMIND
+                        Your
+                        Neural Network to Prevent Catastrophic Forgetting</strong><br>
+                        <small>Tyler L. Hayes*, Kushal Kafle*, <strong>Robik Shrestha*</strong>, Manoj Acharya, and
+                            Christopher Kanan (* denotes equal contribution) </small></h3></a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-3 col-sm-offset-2">
+                    <div><img src="images/remind.png" class="thumbnail img-responsive"
+                                                alt="REMIND Your Neural Network to Prevent Catastrophic Forgetting"><br>
+                    </div>
+                </div>
+
+                <div class="col-sm-5 text-left">
+                    <h4 class="h4-small">
+                        In lifelong machine learning, an agent must be incrementally updated with new knowledge, instead
+                        of
+                        having distinct train and deployment phases. For incrementally training convolutional neural
+                        network
+                        models, prior work has enabled replay by storing raw images, but this is memory intensive and
+                        not
+                        ideal for embedded agents. Here, we propose REMIND, a tensor quantization approach that enables
+                        efficient replay with tensors. Unlike other methods, REMIND is trained in a streaming manner,
+                        meaning it learns one example at a time rather than in large batches containing multiple
+                        classes.
+                        Our approach achieves state-of-the-art results for incremental class learning on the ImageNet-1K
+                        dataset. We demonstrate REMIND's generality by pioneering multi-modal incremental learning for
+                        visual question answering (VQA), which cannot be readily done with comparison models.</h4>
+                    <h4 class="text-status"><strong>Under Review, available on arXiv (2019) </strong></h4>
+                    <a href="https://arxiv.org/abs/1910.02509" target="_blank"><kbd>Paper</kbd></a>
+                    <kbd data-toggle="collapse" data-target="#remind2020">Bibtex</kbd>
+                    <div id="remind2020" class="collapse">
+<pre><code>@article{hayes2019remind,
+  title={REMIND Your Neural Network to Prevent Catastrophic Forgetting},
+  author={Hayes, Tyler L and Kafle, Kushal and Shrestha, Robik and Acharya, Manoj and Kanan, Christopher},
+  journal={arXiv preprint arXiv:1910.02509},
+  year={2019}
+}
+</code></pre>
+                    </div>
+                    <br>
+                </div>
+            </div>
+        </div>
+        <hr/>
+
+
+        <div class="row">
+            <div class="row">
+                <div class="col-sm-8 text-left  col-sm-offset-2 text-center">
+                    <a href="https://arxiv.org/abs/1908.01801" target="_blank"><h3 class="mark paper-title"><strong>Answering
+                        Questions
+                        about Data Visualizations using Efficient Bimodal Fusion</strong><br>
+                        <small>Kushal Kafle, <strong>Robik Shrestha</strong>, Scott Cohen, Brian Price, and Christopher
+                            Kanan</small></h3></a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-3 col-sm-offset-2">
+                    <div><img src="images/prefil.png" class="thumbnail img-responsive"
+                                                alt="Parallel Recurrent Fusion for Chart Question Answering"><br>
+                    </div>
+                </div>
+
+                <div class="col-sm-5 text-left">
+                    <h4 class="h4-small">
+                        Chart question answering (CQA) is a newly proposed visual question answering (VQA) task where an
+                        algorithm must answer questions about data visualizations, e.g. bar charts, pie charts, and line
+                        graphs. Here, we propose a novel CQA algorithm called parallel recurrent fusion of image and
+                        language (PReFIL). PReFIL first learns bimodal embeddings by fusing question and image features
+                        and
+                        then intelligently aggregates these learned embeddings to answer the given question. Despite its
+                        simplicity, PReFIL greatly surpasses state-of-the art systems and human baselines on both the
+                        FigureQA and DVQA datasets. Additionally, we demonstrate that PReFIL can be used to reconstruct
+                        tables by asking a series of questions about a chart.</h4>
+                    <h4 class="text-status"><strong>IEEE Winter Conference on Applications of Computer Vision (WACV
+                        2020)</strong></h4>
+                    <a href="https://arxiv.org/abs/1908.01801" target="_blank"><kbd>Paper</kbd></a>
+                    <kbd data-toggle="collapse" data-target="#kafle2020answering">Bibtex</kbd>
+                    <div id="kafle2020answering" class="collapse">
+    <pre><code>@inproceedings{kafle2020answering,
+  title={Answering Questions about Data Visualizations using Efficient Bimodal Fusion},
+  author={Kafle, Kushal and Shrestha, Robik and Cohen, Scott and Price, Brian and Kanan, Christopher},
+  booktitle={The IEEE Winter Conference on Applications of Computer Vision},
+  pages={1498--1507},
+  year={2020}
+}}
+</code></pre>
+                    </div>
+                    <br>
+                </div>
+            </div>
+        </div>
+        <hr>
+
+
+        <div class="row">
+            <div class="row">
+                <div class="col-sm-8 text-left  col-sm-offset-2 text-center">
+                    <a href="https://arxiv.org/abs/1904.09317" target="_blank"><h3 class="mark paper-title"><strong>Challenges
+                        and
+                        Prospects in Vision and Language Research</strong><br>
+                        <small>Kushal Kafle, <strong>Robik Shrestha</strong>, and Christopher Kanan</small></h3></a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-3 col-sm-offset-2">
+                    <div><img src="images/challenges.png" class="thumbnail img-responsive"
+                                                alt="Parallel Recurrent Fusion for Chart Question Answering"><br>
+                    </div>
+                </div>
+
+                <div class="col-sm-5 text-left">
+                    <h4 class="h4-small">
+                        Language grounded image understanding tasks have often been proposed as a method for evaluating
+                        progress in artificial intelligence. Ideally, these tasks should test a plethora of capabilities
+                        that integrate computer vision, reasoning, and natural language understanding. However, rather
+                        than
+                        behaving as visual Turing tests, recent studies have demonstrated state-of-the-art systems are
+                        achieving good performance through flaws in datasets and evaluation procedures. We review the
+                        current state of affairs and outline a path forward.</h4>
+                    <h4 class="text-status"><strong>Frontiers in Artificial Intelligence - Language and Computation
+                        (2019)</strong></h4>
+                    <a href="https://arxiv.org/abs/1904.09317" target="_blank"><kbd>Paper</kbd></a>
+                    <kbd data-toggle="collapse" data-target="#frontiers2019">Bibtex</kbd>
+                    <div id="frontiers2019" class="collapse">
+    <pre><code>@article{kafle2019challenges,
+  title={Challenges and Prospects in Vision and Language Research},
+  author={Kafle, Kushal and Shrestha, Robik and Kanan, Christopher},
+  journal={arXiv preprint arXiv:1904.09317},
+  year={2019}
+}
+</code></pre>
+                    </div>
+                    <br>
+                </div>
+            </div>
+        </div>
+        <hr/>
+
+
+        <!-- -->
+        <div class="row">
+            <div class="row">
+                <div class="col-sm-8 text-left  col-sm-offset-2 text-center">
+                    <a href="https://arxiv.org/abs/1903.00366" target="_blank"><h3 class="mark paper-title"><strong>Answer
+                        Them All!
+                        Toward Universal Visual Question Answering Models</strong><br>
+                        <small><strong>Robik Shrestha</strong>, Kushal Kafle, and Christopher Kanan</small></h3></a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-3 col-sm-offset-2">
+                    <div><img src="images/ramen.png" class="thumbnail img-responsive"
+                                                alt="RAMEN"><br>
+                    </div>
+                </div>
+
+                <div class="col-sm-5 text-left">
+                    <h4 class="h4-small">
+                        Visual Question Answering (VQA) research is split into two camps: the first focuses on VQA
+                        datasets
+                        that require natural image understanding and the second focuses on synthetic datasets that test
+                        reasoning. A good VQA algorithm should be capable of both, but only a few VQA algorithms are
+                        tested
+                        in this manner. We compare five state-of-the-art VQA algorithms across eight VQA datasets
+                        covering
+                        both domains. To make the comparison fair, all of the models are standardized as much as
+                        possible,
+                        E.g., they use the same visual features, answer vocabularies, etc. We find that methods do not
+                        generalize across the two domains. To address this problem, we propose a new VQA algorithm that
+                        rivals or exceeds the state-of-the-art for both domains.</h4>
+                    <h4 class="text-status"><strong>IEEE Conference on Computer Vision and Pattern Recognition (CVPR
+                        2019)</strong></h4>
+                    <a href="https://arxiv.org/abs/1903.00366" target="_blank"><kbd>Paper</kbd></a>
+                    <kbd data-toggle="collapse" data-target="#cvpr2019">Bibtex</kbd>
+                    <div id="cvpr2019" class="collapse">
+    <pre><code>@inproceedings{shrestha2019ramen,
+title={Answer Them All! Toward Universal Visual Question Answering Models},
+  author={Shrestha, Robik and Kafle, Kushal and Kanan, Christopher},
+  booktitle={CVPR},
+  year={2019}
+    }
+</code></pre>
+                    </div>
+                    <br>
+                </div>
+            </div>
+        </div>
+        <hr/>
+        <!-- -->
+
+
+    </div>
+</div>
+
+<footer class="container-fluid text-center">
+    <script>
+        $(document).ready(function () {
+            // Add smooth scrolling to all links in navbar + footer link
+            $(".navbar a, footer a[href='#Home']").on('click', function (event) {
+
+                // Prevent default anchor click behavior
+
+
+                // Store hash
+                var hash = this.hash;
+
+                if (hash != "") {
+                    event.preventDefault();
+                }
+
+                // Using jQuery's animate() method to add smooth page scroll
+                // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+                $('html, body').stop().animate({
+                    scrollTop: $(hash).offset().top
+                }, 900, function () {
+
+                    // Add hash (#) to URL when done scrolling (default click behavior)
+                    window.location.hash = hash;
+                });
+            });
+
+            $(window).scroll(function () {
+                $(".slideanim").each(function () {
+                    var pos = $(this).offset().top;
+
+                    var winTop = $(window).scrollTop();
+                    if (pos < winTop + 600) {
+                        $(this).addClass("slide");
+                    }
+                });
+            });
+        })
+    </script>
+
+    <a href="#Home" title="To Top">
+        <span class="glyphicon glyphicon-home" style="font-size: 40px; color:white"></span>
+    </a>
+    <hr>
+</footer>
+
+
+</body>
+</html>
