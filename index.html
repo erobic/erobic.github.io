@@ -43,7 +43,8 @@
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-  
+<!--    <script src="index.js"></script>-->
+
     <style>
         heading {
             /*background-color: #636a92;*/
@@ -347,6 +348,7 @@
             <ul class="nav navbar-nav navbar-right">
                 <li data-toggle="collapse" data-target=".navbar-collapse.in"><a href="#home">HOME</a></li>
                 <li data-toggle="collapse" data-target=".navbar-collapse.in"><a href="#about">ABOUT</a></li>
+                <li data-toggle="collapse" data-target=".navbar-collapse.in"><a href="#news">NEWS</a></li>
                 <!--                <li data-toggle="collapse" data-target=".navbar-collapse.in"><a href="#news" >RECENT</a></li>-->
                 <li data-toggle="collapse" data-target=".navbar-collapse.in"><a href="#research">PUBLICATIONS</a></li>
 
@@ -387,39 +389,58 @@
 
         <div class="col-sm-6 col-sm-offset-2">
 
-            <h2>About Me</h2><br>
+            <h1>About Me</h1><br>
 
             <h4>
 
-                I am a third year Ph.D. student working with <a href="http://chriskanan.com" target="_blank">Dr.
+                I am a fourth year Ph.D. student working with <a href="http://chriskanan.com" target="_blank">Dr.
                 Christopher Kanan</a> in
                 <a href="http://www.cis.rit.edu" target="_blank">Chester F. Carlson Center for Imaging Science</a> at <a
                     href="http://www.rit.edu" target="_blank">
                 Rochester Institute of Technology</a>.
             </h4>
             <h4>
-                My research is focused on developing robust computer vision and natural language processing systems.
-                I am interested in developing systems that demonstrate true understanding and reasoning skills through visual concept learning.
+                My research is focused on robust vision and natural language systems.
+                I am mainly interested in bias-resilient multimodal systems and visio-linguistic concept learning.
             </h4>
             <h4>
                 Before joining the Ph.D. program, I worked at <a href="http://www.vivekahealth.com/">Viveka Health</a>,
-                where I was involved in developing a fraud detection engine for U.S. healthcare insurance claims.
+                where we developed a fraud detection engine for U.S. healthcare insurance claims.
             </h4>
 
         </div>
         <div class="col-sm-2">
             <br><br><br>
-            <span><img src="images/robik.jpg" alt="Robik Shrestha" style="width:200px;height:250px;"></span>
+            <span><img src="images/robik.jpg" alt="Robik Shrestha" style="width:250px;height:250px;"></span>
         </div>
     </div>
 </div>
 
+<div id="news" class="container-fluid section-news">
+    <div class="row">
+        <h1 class="text-center">Latest News</h1><br>
+        <div class="col-sm-8 col-sm-offset-2">
+
+            <h4><b>June 2021:</b>Our paper <a href="https://www.frontiersin.org/articles/10.3389/fdgth.2021.671015/full">"Detecting Spurious Correlations With Sanity Tests for Artificial Intelligence Guided Radiology Systems "</a> was accepted at Frontiers in Digital Health.</h4>
+            <h4><b>May 2021:</b>Started working as a Research Intern at <a href="https://www.adobe.com/">Adobe Inc!</a></h4>
+            <h4><b>Oct 2020:</b>Our paper <a href="https://arxiv.org/pdf/2005.09241.pdf">"On the Value of OOD Testing: An Example of Goodhart's Law"</a> was accepted at NeurIPS!</h4>
+            <h4><b>April 2020:</b>Our paper <a href="https://arxiv.org/pdf/2004.05704.pdf">"A negative case analysis of visual grounding methods for VQA"</a> was accepted at ACL!</h4>
+
+        </div>
+
+        <!-- Collapsed News -->
+        <a class="col-sm-8 col-sm-offset-2 text-center collapsed" data-toggle="collapse" data-target="#collapseNews" role="button" aria-expanded="false" aria-controls="collapseNews"><span class="glyphicon glyphicon-chevron-down"></span></a>
+        <div class="col-sm-8 col-sm-offset-2 collapse" id="collapseNews" aria-expanded="false" style="height: 0px;">
+            <h4><b>Jul 2020:</b> Our paper <a href="https://arxiv.org/abs/1910.02509">"REMIND Your Neural Network to Prevent Catastrophic Forgetting"</a> was accepted at ECCV!</h4>
+        </div>
+    </div>
+</div>
 
 <div id="research">
     <div class="container-fluid">
         <h1 class="text-center">Publications</h1><br>
 
-<!-- -->
+
         <div class="row">
             <div class="row">
                 <div class="col-sm-8 text-left  col-sm-offset-2 text-center">
@@ -763,6 +784,8 @@ title={Answer Them All! Toward Universal Visual Question Answering Models},
     <hr>
 </footer>
 
-
+<script>
+    main();
+</script>
 </body>
 </html>
