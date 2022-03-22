@@ -442,7 +442,50 @@
     <div class="container-fluid">
         <h1 class="text-center">Publications</h1><br>
 
+        <hr/>
 
+
+        <div class="row">
+            <div class="row">
+                <div class="col-sm-8 text-left  col-sm-offset-2 text-center">
+                    <a href="https://arxiv.org/abs/2104.00170" target="_blank"><h3 class="mark paper-title"><strong>An Investigation of Critical Issues in Bias Mitigation Techniques
+
+                    </strong><br>
+                        <small><strong>Robik Shrestha</strong>, Kushal Kafle, Christopher Kanan</small></h3></a>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col-sm-3 col-sm-offset-2">
+                    <div><img src="images/investigation.png" class="thumbnail img-responsive"
+                                                alt="An Investigation of Critical Issues in Bias Mitigation Techniques"><br>
+                    </div>
+                </div>
+
+                <div class="col-sm-5 text-left">
+                    <h4 class="h4-small">
+                        A critical problem in deep learning is that systems learn inappropriate biases, resulting in their inability to perform well on minority groups. This has led to the creation of multiple algorithms that endeavor to mitigate bias. However, it is not clear how effective these methods are. This is because study protocols differ among papers, systems are tested on datasets that fail to test many forms of bias, and systems have access to hidden knowledge or are tuned specifically to the test set. To address this, we introduce an improved evaluation protocol, sensible metrics, and a new dataset, which enables us to ask and answer critical questions about bias mitigation algorithms. We evaluate seven state-of-the-art algorithms using the same network architecture and hyperparameter selection policy across three benchmark datasets. We introduce a new dataset called Biased MNIST that enables assessment of robustness to multiple bias sources. We use Biased MNIST and a visual question answering (VQA) benchmark to assess robustness to hidden biases. Rather than only tuning to the test set distribution, we study robustness across different tuning distributions, which is critical because for many applications the test distribution may not be known during development. We find that algorithms exploit hidden biases, are unable to scale to multiple forms of bias, and are highly sensitive to the choice of tuning set. Based on our findings, we implore the community to adopt more rigorous assessment of future bias mitigation methods</h4>
+                    <h4 class="text-status"><strong>Workshop on Applications of Computer Vision (WACV 2022)</strong></h4>
+                    <a href="https://arxiv.org/abs/2104.00170" target="_blank"><kbd>Paper</kbd></a>
+                    <a href="https://github.com/erobic/bias-mitigators" target="_blank"><kbd>Code</kbd></a>
+                    <kbd data-toggle="collapse" data-target="#wacv2022">Bibtex</kbd>
+                    <div id="wacv2022" class="collapse">
+<pre><code>@article{shrestha2021investigation,
+  title={An investigation of critical issues in bias mitigation techniques},
+  author={Shrestha, Robik and Kafle, Kushal and Kanan, Christopher},
+  journal={Workshop on Applications of Computer Vision},
+  year={2021}
+}
+</code></pre>
+                    </div>
+                    <br>
+                </div>
+            </div>
+        </div>
+        <hr/>
+
+        <!-- -->
         <div class="row">
             <div class="row">
                 <div class="col-sm-8 text-left  col-sm-offset-2 text-center">
@@ -451,6 +494,8 @@
                         <small><strong>Robik Shrestha</strong>, Kushal Kafle, Christopher Kanan</small></h3></a>
                 </div>
             </div>
+
+
             <div class="row">
                 <div class="col-sm-3 col-sm-offset-2">
                     <div><img src="images/negative-case-analysis.png" class="thumbnail img-responsive"
