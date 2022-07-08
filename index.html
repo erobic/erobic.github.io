@@ -420,7 +420,11 @@
 <div id="news" class="container-fluid section-news">
     <div class="row">
         <h1 class="text-center">Latest News</h1><br>
+
         <div class="col-sm-8 col-sm-offset-2">
+            <h4><b>July 2022:</b>Our paper <a href="https://arxiv.org/abs/2204.02426">"OccamNets: Mitigating Dataset
+                Bias by Favoring Simpler Hypotheses
+                "</a> was accepted at ECCV 2022 (Oral).</h4>
 
             <h4><b>Jan 2022:</b>Our paper <a href="https://arxiv.org/abs/2104.00170">"An Investigation of Critical
                 Issues in Bias Mitigation Techniques
@@ -435,7 +439,6 @@
                 An Example of Goodhart's Law"</a> was accepted at NeurIPS!</h4>
             <h4><b>April 2020:</b>Our paper <a href="https://arxiv.org/pdf/2004.05704.pdf">"A negative case analysis of
                 visual grounding methods for VQA"</a> was accepted at ACL!</h4>
-
         </div>
 
         <!-- Collapsed News -->
@@ -454,6 +457,59 @@
         <h1 class="text-center">Publications</h1><br>
 
         <hr/>
+
+        <div class="row">
+            <div class="row">
+                <div class="col-sm-8 text-left  col-sm-offset-2 text-center">
+                    <a href="https://arxiv.org/abs/2204.02426" target="_blank"><h3 class="mark paper-title"><strong>OccamNets:
+                        Mitigating Dataset Bias by Favoring Simpler Hypotheses
+                    </strong><br>
+                        <small><strong>Robik Shrestha</strong>, Kushal Kafle, Christopher Kanan</small></h3></a>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col-sm-3 col-sm-offset-2">
+                    <div><img src="images/occamnets.png" class="thumbnail img-responsive"
+                              alt="OccamNets: Mitigating Dataset Bias by Favoring Simpler Hypotheses"><br>
+                    </div>
+                </div>
+
+                <div class="col-sm-5 text-left">
+                    <h4 class="h4-small">
+                        Dataset bias and spurious correlations can significantly impair generalization in deep neural
+                        networks. Many prior efforts have addressed this problem using either alternative loss functions
+                        or sampling strategies that focus on rare patterns. We propose a new direction: modifying the
+                        network architecture to impose inductive biases that make the network robust to dataset bias.
+                        Specifically, we propose OccamNets, which are biased to favor simpler solutions by
+                        design. OccamNets have two inductive biases. First, they are biased to use as little
+                        network depth as needed for an individual example. Second, they are biased toward using fewer
+                        image locations for prediction. While OccamNets are biased toward simpler hypotheses,
+                        they can learn more complex hypotheses if necessary. In experiments, OccamNets outperform
+                        or rival state-of-the-art methods run on architectures that do not incorporate these inductive
+                        biases. Furthermore, we demonstrate that when the state-of-the-art debiasing methods are
+                        combined with OccamNets, results further improve.</h4>
+                    <h4 class="text-status"><strong>European Conference on Computer Vision. (ECCV 2022)</strong>
+                    </h4>
+                    <a href="https://arxiv.org/abs/2204.02426" target="_blank"><kbd>Paper</kbd></a>
+                    <a href="https://github.com/erobic/occam-nets-v1" target="_blank"><kbd>Code</kbd></a>
+                    <kbd data-toggle="collapse" data-target="#eccv2022">Bibtex</kbd>
+                    <div id="eccv2022" class="collapse">
+                    <pre>
+                        <code>@article{shrestha2022occamnets,
+                          title={OccamNets: Mitigating Dataset Bias by Favoring Simpler Hypotheses},
+                          author={Shrestha, Robik and Kafle, Kushal and Kanan, Christopher},
+                          booktitle={European Conference on Computer Vision (ECCV)},
+                          year={2022}
+                        }
+                        </code>
+                    </pre>
+                    </div>
+                    <br>
+                </div>
+            </div>
+        </div>
 
         <!-- -->
 
@@ -495,7 +551,8 @@
                         are unable to scale to multiple forms of bias, and are highly sensitive to the choice of tuning
                         set. Based on our findings, we implore the community to adopt more rigorous assessment of future
                         bias mitigation methods</h4>
-                    <h4 class="text-status"><strong>IEEE/CVF Winter Conference of Applications on Computer Vision (WACV 2022)</strong>
+                    <h4 class="text-status"><strong>IEEE/CVF Winter Conference of Applications on Computer Vision (WACV
+                        2022)</strong>
                     </h4>
                     <a href="https://arxiv.org/abs/2104.00170" target="_blank"><kbd>Paper</kbd></a>
                     <a href="https://github.com/erobic/bias-mitigators" target="_blank"><kbd>Code</kbd></a>
@@ -906,7 +963,8 @@ title={Answer Them All! Toward Universal Visual Question Answering Models},
             <ul>
                 <li>My most favorite activity is wondering.</li>
                 <li>I constantly wonder about the life forms that will travel through the space and play jazz for
-                    the aliens.</li>
+                    the aliens.
+                </li>
                 <li>
                     I also wonder about our existence. In fact, I have a hypothesis: existence is a game where the
                     infinity has opted for physical manifestations with consciousness to experience itself!
@@ -916,7 +974,8 @@ title={Answer Them All! Toward Universal Visual Question Answering Models},
 
         <h3>Note for the Distant Offsprings</h3>
         <h4>
-            Could you please train one of my deep learning models and test it on the aliens? I really do want my models to generalize!
+            Could you please train one of my deep learning models and test it on the aliens? I really do want my models
+            to generalize!
         </h4>
 
     </div>
