@@ -382,9 +382,7 @@
                 <a href="https://twitter.com/ShresthaRobik" target="_blank">
                     <img border="0" alt="Twitter" src="images/twitter-logo.png" width="64"></a>
             </h1>
-            <h3 class="fg-red">I am currently on the job market for research positions related to Computer Vision, Natural Language Processing, Scalable/Trustworthy AI
-</h3>
-            <h3>Research Assistant at Rochester Institute of Technology</h3>
+            <h3>An incoming Applied Scientist at Amazon AGI</h3>
             robikshrestha [at] gmail [dot] com
         </div>
     </div>
@@ -399,20 +397,14 @@
             <h1>About Me</h1><br>
 
             <h4>
-                A sixth year Ph.D. candidate working with <a href="http://chriskanan.com" target="_blank">Dr.
-                Christopher Kanan</a> in
-                <a href="http://www.cis.rit.edu" target="_blank">Chester F. Carlson Center for Imaging Science</a> at <a
-                    href="http://www.rit.edu" target="_blank">
-                Rochester Institute of Technology</a>. My research is focused on robust vision and natural language
-                systems.
-                I am mainly interested in bias-resilient multimodal systems and visio-linguistic concept learning.
-
+                I am an incoming Applied Scientist at Amazon AGI. I received my PhD in 2023 (advisor:<a href="http://chriskanan.com" target="_blank"> Dr. Christopher Kanan</a>). 
+                My research interests include: multimodal vision and language systems, responsible AI and generative AI.                
             </h4>
 
-            <h4>
+            <!-- <h4>
                 Before joining the Ph.D. program, I worked at <a href="http://www.vivekahealth.com/">Viveka Health</a>,
                 where we developed a fraud detection engine for U.S. healthcare insurance claims.
-            </h4>
+            </h4> -->
 
         </div>
         <div class="col-sm-2">
@@ -427,12 +419,21 @@
         <h1 class="text-center">Latest News</h1><br>
 
         <div class="col-sm-8 col-sm-offset-2">
-            <h4><b>May 2023:</b> Starting as an Applied Scientist Intern at Amazon AWS AI Labs. I am a part of the Responsible AI team.
-             More updates to follow :-)</h4>
-            <h4><b>July 2022:</b>Our paper <a href="https://arxiv.org/abs/2204.02426">"OccamNets: Mitigating Dataset
+            <h4><b>May 2024:</b> Started as an Applied Scientist at Amazon AGI</h4>
+            <h4><b>Feb 2024:</b> The work done during my Amazon internship: <a href="https://arxiv.org/abs/2403.19964">FairRAG</a> has been accepted to CVPR 2024</h4>
+            <h4><b>Feb 2024:</b> Joined University of Rochester for a temporary role on building Generative AI models to optimize inertial confinement fusion</h4>
+            <h4><b>Dec 2023:</b> Successfully defended my Ph.D.</h4>
+            <h4><b>May 2023:</b> Started as an Applied Scientist Intern at Amazon AWS AI Labs. I am a part of the Responsible AI team</h4>
+            <h4><b>July 2022:</b> Our paper <a href="https://arxiv.org/abs/2204.02426">"OccamNets: Mitigating Dataset
                 Bias by Favoring Simpler Hypotheses
-                "</a> was accepted at ECCV 2022 (Oral).</h4>
+                "</a> was accepted at ECCV 2022 (Oral)</h4>
+        </div>
 
+        <!-- Collapsed News -->
+        <a class="col-sm-8 col-sm-offset-2 text-center collapsed" data-toggle="collapse" data-target="#collapseNews"
+           role="button" aria-expanded="false" aria-controls="collapseNews"><span
+                class="glyphicon glyphicon-chevron-down"></span></a>
+        <div class="col-sm-8 col-sm-offset-2 collapse" id="collapseNews" aria-expanded="false" style="height: 0px;">
             <h4><b>Jan 2022:</b>Our paper <a href="https://arxiv.org/abs/2104.00170">"An Investigation of Critical
                 Issues in Bias Mitigation Techniques
                 "</a> was accepted at WACV.</h4>
@@ -446,13 +447,6 @@
                 An Example of Goodhart's Law"</a> was accepted at NeurIPS!</h4>
             <h4><b>April 2020:</b>Our paper <a href="https://arxiv.org/pdf/2004.05704.pdf">"A negative case analysis of
                 visual grounding methods for VQA"</a> was accepted at ACL!</h4>
-        </div>
-
-        <!-- Collapsed News -->
-        <a class="col-sm-8 col-sm-offset-2 text-center collapsed" data-toggle="collapse" data-target="#collapseNews"
-           role="button" aria-expanded="false" aria-controls="collapseNews"><span
-                class="glyphicon glyphicon-chevron-down"></span></a>
-        <div class="col-sm-8 col-sm-offset-2 collapse" id="collapseNews" aria-expanded="false" style="height: 0px;">
             <h4><b>Jul 2020:</b> Our paper <a href="https://arxiv.org/abs/1910.02509">"REMIND Your Neural Network to
                 Prevent Catastrophic Forgetting"</a> was accepted at ECCV!</h4>
         </div>
@@ -464,6 +458,56 @@
         <h1 class="text-center">Publications</h1><br>
 
         <hr/>
+
+        <div class="row">
+            <div class="row">
+                <div class="col-sm-8 text-left  col-sm-offset-2 text-center">
+                    <a href="https://arxiv.org/abs/2403.19964" target="_blank"><h3 class="mark paper-title"><strong>FairRAG: Fair Human Generation via Fair Retrieval Augmentation
+                    </strong><br>
+                        <small><strong>Robik Shrestha</strong>, Yang Zou, Qiuyu Chen, Zhiheng Li, Yusheng Xie, Siqi Deng</small></h3></a>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col-sm-3 col-sm-offset-2">
+                    <div><img src="images/fairrag.jpg" class="thumbnail img-responsive"
+                              alt="FairRAG"><br>
+                    </div>
+                </div>
+
+                <div class="col-sm-5 text-left">
+                    <h4 class="h4-small">
+                        Existing text-to-image generative models reflect or even amplify societal biases ingrained in their training data. 
+                        This is especially concerning for human image generation where models are biased against certain demographic groups. 
+                        Existing attempts to rectify this issue are hindered by the inherent limitations of the pre-trained models and fail to substantially 
+                        improve demographic diversity. In this work, we introduce Fair Retrieval Augmented Generation (FairRAG),
+                         a novel framework that conditions pre-trained generative models on reference images retrieved from an external image database to improve fairness in human generation. 
+                         FairRAG enables conditioning through a lightweight linear module that projects reference images into the textual space. 
+                         To enhance fairness, FairRAG applies simple-yet-effective debiasing strategies, 
+                         providing images from diverse demographic groups during the generative process. 
+                         Extensive experiments demonstrate that FairRAG outperforms existing methods in terms of demographic diversity, 
+                         image-text alignment, and image fidelity while incurring minimal computational overhead during inference.
+</h4>
+                    <h4 class="text-status"><strong>Conference on Computer Vision and Pattern Recognition (CVPR 2024)</strong>
+                    </h4>
+                    <a href="https://arxiv.org/abs/2403.19964" target="_blank"><kbd>Paper</kbd></a>
+                    <!-- <a href="https://github.com/erobic/occam-nets-v1" target="_blank"><kbd>Code</kbd></a> -->
+                    <kbd data-toggle="collapse" data-target="#eccv2022">Bibtex</kbd>
+                    <div id="eccv2022" class="collapse">
+                        <pre><code>@article{shrestha2024fairrag,
+                            title={FairRAG: Fair Human Generation via Fair Retrieval Augmentation},
+                            author={Shrestha, Robik and Zou, Yang and Chen, Qiuyu and Li, Zhiheng and Xie, Yusheng and Deng, Siqi},
+                            journal={CVPR},
+                            year={2024}
+                          }
+                        </code></pre>
+                    </div>
+                    <br>
+                </div>
+            </div>
+        </div>
+        <!---->
 
         <div class="row">
             <div class="row">
@@ -503,13 +547,13 @@
                     <a href="https://github.com/erobic/occam-nets-v1" target="_blank"><kbd>Code</kbd></a>
                     <kbd data-toggle="collapse" data-target="#eccv2022">Bibtex</kbd>
                     <div id="eccv2022" class="collapse">
-<pre><code>@article{shrestha2022occamnets,
-  title={OccamNets: Mitigating Dataset Bias by Favoring Simpler Hypotheses},
-  author={Shrestha, Robik and Kafle, Kushal and Kanan, Christopher},
-  booktitle={European Conference on Computer Vision (ECCV)},
-  year={2022}
-}
-</code></pre>
+                        <pre><code>@article{shrestha2022occamnets,
+                        title={OccamNets: Mitigating Dataset Bias by Favoring Simpler Hypotheses},
+                        author={Shrestha, Robik and Kafle, Kushal and Kanan, Christopher},
+                        booktitle={European Conference on Computer Vision (ECCV)},
+                        year={2022}
+                        }
+                        </code></pre>
                     </div>
                     <br>
                 </div>
